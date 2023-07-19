@@ -1,0 +1,63 @@
+{
+  "name": "@reyno/utils",
+  "version": "0.0.1",
+  "description": "Useful utility functions for JavaScript and TypeScript.",
+  "engines": {
+    "node": "^18.16",
+    "pnpm": "^8.6.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "dev": "tsc --watch -p ./configs/tsconfig.esm.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "npm",
+    "javascript",
+    "typescript",
+    "esm",
+    "cjs",
+    "ecmascript",
+    "commonjs",
+    "nodejs",
+    "utilities"
+  ],
+  "author": "Reyno te Koppele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reynotekoppele/google-maps/issues"
+  },
+  "homepage": "https://github.com/reynotekoppele/google-maps#readme",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.1.0",
+    "@wordpress/browserslist-config": "^5.20.0",
+    "@wordpress/eslint-plugin": "^14.10.0",
+    "eslint": "^8.45.0",
+    "semantic-release": "^21.0.7",
+    "typescript": "^5.1.6"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ]
+}

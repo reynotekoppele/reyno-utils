@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "semi": 2,
+    "strict": 1,
+    "jsdoc/no-undefined-types": 0
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": ["plugin:@wordpress/eslint-plugin/esnext"]
+}
