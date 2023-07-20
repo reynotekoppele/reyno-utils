@@ -6,11 +6,12 @@
     "node": "^18.16",
     "pnpm": "^8.6.0"
   },
+  "type": "module",
   "scripts": {
     "clean": "rm -rf ./lib",
     "dev": "tsc --watch -p ./configs/tsconfig.esm.json",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json",
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
     "semantic-release": "semantic-release",
     "prepack": "npm run build"

@@ -1,12 +1,6 @@
 /**
  * Internal dependencies.
  */
-import debounce from './debounce';
-import sleep from './sleep';
-import throttle from './throttle';
-
-export {
-	debounce,
-	sleep,
-	throttle,
-};
+export { default as debounce } from './debounce.js';
+export { default as sleep } from './sleep.js';
+export { default as throttle } from './throttle.js';

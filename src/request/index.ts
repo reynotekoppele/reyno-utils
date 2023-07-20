@@ -1,8 +1,4 @@
 /**
  * Internal dependencies.
  */
-import doRequest from './doRequest';
-
-export {
-	doRequest,
-};
+export { default as doRequest } from './doRequest.js';
