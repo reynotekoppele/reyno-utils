@@ -1,5 +1,5 @@
 {
-  "name": "@reyno/utils",
+  "name": "@reynotekoppele/utils",
   "version": "0.0.1",
   "description": "Useful utility functions for JavaScript and TypeScript.",
   "engines": {
@@ -9,6 +9,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf ./lib",
+    "test": "node --test",
     "dev": "tsc --watch -p ./configs/tsconfig.esm.json",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p ./configs/tsconfig.esm.json",
@@ -47,9 +48,9 @@
   "author": "Reyno te Koppele",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reynotekoppele/google-maps/issues"
+    "url": "https://github.com/reynotekoppele/reyno-utils/issues"
   },
-  "homepage": "https://github.com/reynotekoppele/google-maps#readme",
+  "homepage": "https://github.com/reynotekoppele/reyno-utils#readme",
   "devDependencies": {
     "@typescript-eslint/parser": "^6.1.0",
     "@wordpress/browserslist-config": "^5.20.0",
@@ -68,5 +69,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reynotekoppele/reyno-utils.git"
+  },
+  "publishConfig": {
+    "@reynotekoppele:registry": "https://npm.pkg.github.com"
   }
 }

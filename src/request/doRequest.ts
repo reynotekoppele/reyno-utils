@@ -11,7 +11,7 @@
  */
 const doRequest = async <T>( url: string, options = {}, controller = null ): Promise<T> => {
 	const mergedOptions = {
-		method: 'POST',
+		method: 'GET',
 		// @ts-ignore
 		signal: controller?.signal,
 		...options,
