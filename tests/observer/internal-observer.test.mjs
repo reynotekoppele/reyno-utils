@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 /**
  * Internal dependencies.
  */
-import { observeInternalProperty } from '../../lib/esm/index.js';
+import { observeInternalProperty } from '../../dist/index.mjs';
 
 describe( 'observeInternalProperty', () => {
 	it( 'should observe internal property', ( t, done ) => {

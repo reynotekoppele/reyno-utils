@@ -6,34 +6,16 @@
     "node": "^18.16",
     "pnpm": "^8.6.0"
   },
-  "type": "module",
   "scripts": {
-    "clean": "rm -rf ./lib",
+    "clean": "rm -rf dist",
     "test": "node --test",
-    "dev": "tsc --watch -p ./configs/tsconfig.esm.json",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./configs/tsconfig.esm.json",
-    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
-    "semantic-release": "semantic-release",
-    "prepack": "npm run build"
+    "build": "pnpm run clean && tsup src/index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
   },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./lib/esm/types/index.d.ts",
-        "default": "./lib/esm/index.mjs"
-      },
-      "require": {
-        "types": "./lib/cjs/types/index.d.ts",
-        "default": "./lib/cjs/index.js"
-      }
-    }
-  },
-  "types": "./lib/cjs/types/index.d.ts",
-  "main": "./lib/cjs/index.js",
-  "files": [
-    "lib/**/*"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "keywords": [
     "npm",
     "javascript",
@@ -52,11 +34,12 @@
   },
   "homepage": "https://github.com/reynotekoppele/reyno-utils#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@typescript-eslint/parser": "^6.1.0",
     "@wordpress/browserslist-config": "^5.20.0",
     "@wordpress/eslint-plugin": "^14.10.0",
     "eslint": "^8.45.0",
-    "semantic-release": "^21.0.7",
+    "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   },
   "browserslist": [

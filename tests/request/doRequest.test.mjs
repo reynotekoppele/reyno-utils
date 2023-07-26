@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 /**
  * Internal dependencies.
  */
-import { doRequest } from '../../lib/esm/index.js';
+import { doRequest } from '../../dist/index.mjs';
 
 describe( 'doRequest', () => {
 	it( 'should do request', async () => {

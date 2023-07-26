@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 /**
  * Internal dependencies.
  */
-import { sleep } from '../../lib/esm/index.js';
+import { sleep } from '../../dist/index.mjs';
 
 describe( 'sleep', () => {
 	it( 'should sleep for 1 second', async () => {

@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 /**
  * Internal dependencies.
  */
-import { throttle, sleep } from '../../lib/esm/index.js';
+import { throttle, sleep } from '../../dist/index.mjs';
 
 describe( 'throttle', () => {
 	it( 'should fire twice', async () => {

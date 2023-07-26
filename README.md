@@ -34,7 +34,3 @@ const { sleep } = require( '@reyno/utils' );
 - [observeExternalProperty](https://github.com/reynotekoppele/reyno-utils/blob/main/src/observer/external-observer.ts)
 - [observeInternalProperty](https://github.com/reynotekoppele/reyno-utils/blob/main/src/observer/internal-observer.ts)
 -[doRequest](https://github.com/reynotekoppele/reyno-utils/blob/main/src/request/doRequest.ts)
-
-
-rw: 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
-r:  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

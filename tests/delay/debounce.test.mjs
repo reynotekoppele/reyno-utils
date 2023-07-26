@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 /**
  * Internal dependencies.
  */
-import { debounce, sleep } from '../../lib/esm/index.js';
+import { debounce, sleep } from '../../dist/index.mjs';
 
 describe( 'debounce', () => {
 	it( 'should fire only once', async () => {
