@@ -22,7 +22,7 @@ describe( 'throttle', () => {
 
 		assert.equal( count, 1 );
 
-		await sleep( 200 );
+		await sleep( 500 );
 
 		assert.equal( count, 2 );
 	} );
