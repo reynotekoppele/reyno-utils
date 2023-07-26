@@ -6,7 +6,7 @@ The package is available in CommonJS and ESM format.
 
 ## Installation and Usage
 
-Prerequisites: [Node.js](https://nodejs.org/en/) (>=18.0.0) and [npm](https://www.npmjs.com/) (>=9.5.1)
+Prerequisites: [Node.js](https://nodejs.org/en/) (>=18.0.0) and [pnpm](https://www.npmjs.com/) (>=8.6.0)
 
 You can install the package using the command:
 
@@ -33,4 +33,4 @@ const { sleep } = require( '@reyno/utils' );
 - [throttle](https://github.com/reynotekoppele/reyno-utils/blob/main/src/delay/throttle.ts)
 - [observeExternalProperty](https://github.com/reynotekoppele/reyno-utils/blob/main/src/observer/external-observer.ts)
 - [observeInternalProperty](https://github.com/reynotekoppele/reyno-utils/blob/main/src/observer/internal-observer.ts)
--[doRequest](https://github.com/reynotekoppele/reyno-utils/blob/main/src/request/doRequest.ts)
+- [doRequest](https://github.com/reynotekoppele/reyno-utils/blob/main/src/request/doRequest.ts)

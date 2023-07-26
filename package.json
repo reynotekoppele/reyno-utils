@@ -52,8 +52,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reynotekoppele/reyno-utils.git"
-  },
-  "publishConfig": {
-    "@reynotekoppele:registry": "https://npm.pkg.github.com"
   }
 }
