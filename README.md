@@ -28,6 +28,7 @@ const { sleep } = require( '@reyno/utils' );
 
 ##  Functions
 
+- [TrapFocus](https://github.com/reynotekoppele/reyno-utils/blob/main/src/accessibility/trap-focus.ts)
 - [debounce](https://github.com/reynotekoppele/reyno-utils/blob/main/src/delay/debounce.ts)
 - [sleep](https://github.com/reynotekoppele/reyno-utils/blob/main/src/delay/sleep.ts)
 - [throttle](https://github.com/reynotekoppele/reyno-utils/blob/main/src/delay/throttle.ts)
